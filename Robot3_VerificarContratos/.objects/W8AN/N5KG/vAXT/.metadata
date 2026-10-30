@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Doc01.pdf - Adobe Acrobat Reader (64-bit)",
+  "Type": "Screen",
+  "Id": "vAXTsoP4Zk6LJ0jicJ9Psw",
+  "Reference": "T4aJcCf6ZkKju9AdngYWKQ/vAXTsoP4Zk6LJ0jicJ9Psw",
+  "ParentRef": "T4aJcCf6ZkKju9AdngYWKQ/N5KGa4rF_0aM4jiCIaimnw",
+  "Created": "2026-10-05T17:13:48.5784019Z",
+  "Updated": "2026-10-05T17:13:48.5784019Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.9.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

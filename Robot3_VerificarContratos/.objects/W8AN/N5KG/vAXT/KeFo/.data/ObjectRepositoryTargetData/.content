@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="bNU9LtJWckeDAnJHdLpE2A" Reference="T4aJcCf6ZkKju9AdngYWKQ/KeFoyNAVWUuBhuzeeImUhg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="157, 74, 152, 21" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd aaname='Ampliación:' cls='ComboBoxEx32' /&gt;&lt;wnd aaname='Ampliación:' cls='ComboBox' /&gt;&lt;wnd aaname='Ampliación:' cls='Edit' /&gt;" Guid="037f38ef-8ab1-4eb6-b664-f6cd7a3837fc" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='#32770' title='Ampliación o reducción' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="b299ff57c1f9217f1604d736b67e0018.jpg" xmlns="">05DtTF4mLX0O0rq_vETc6VQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

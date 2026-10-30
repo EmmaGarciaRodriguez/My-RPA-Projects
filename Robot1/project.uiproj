@@ -1,0 +1,6 @@
+{
+  "Name": "Robot1",
+  "ProjectType": "Process",
+  "Description": "Extraer datos de navegador y analizarlos",
+  "MainFile": "Main.xaml"
+}

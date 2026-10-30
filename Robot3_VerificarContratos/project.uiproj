@@ -1,0 +1,6 @@
+{
+  "Name": "Robot3_VerificarContratos",
+  "ProjectType": "Process",
+  "Description": "Verificar Contratos",
+  "MainFile": "Main.xaml"
+}

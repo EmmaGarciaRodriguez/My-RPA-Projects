@@ -1,0 +1,474 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="540,5056" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="56">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="GLOBAL" sap:VirtualizedContainerService.HintSize="550.4,4991.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="TablaDatos" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Ámbito de aplicación de Excel" sap:VirtualizedContainerService.HintSize="508.8,262.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Datos_Participantes.xlsx">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="375.2,152.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[TablaDatos]" DisplayName="Leer rango" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="A1:I4" SheetName="Hoja1" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[TablaDatos]" DisplayName="Para cada fila de la tabla de datos" sap:VirtualizedContainerService.HintSize="508.8,4596" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="475.2,4480" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Iniciar proceso" FileName="[CurrentRow(&quot;RutaArchivo&quot;).ToString]" sap:VirtualizedContainerService.HintSize="433.6,88" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Enviar tecla de acceso rápido 'acrobat.exe encuesta0Ty...'" sap:VirtualizedContainerService.HintSize="433.6,154.4" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="y" KeyModifiers="Ctrl">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b5fe8fd6-1f05-411d-89f5-00a652ac9acd" InformativeScreenshot="31f6e6d10e530056247dc9060be8cedb" Selector="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='*.pdf - Adobe Acrobat Reader DC (64-bit)' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Asociar ventana 'acrobat.exe Ampliación'" sap:VirtualizedContainerService.HintSize="433.6,569.6" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="c3fee343036272a622324c21981f33dd" Selector="&lt;wnd app='acrobat.exe' cls='#32770' title='Ampliación o reducción' /&gt;">
+              <ui:WindowScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="375.2,422.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Escribir en 'Edit'" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="65">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="98bddac5-ff1e-417e-8ef1-46be6d4dd1ce" InformativeScreenshot="475cf442650be21f9295fe487eee6599" Selector="&lt;wnd aaname='Ampliación:' cls='ComboBoxEx32' /&gt;&lt;wnd aaname='Ampliación:' cls='ComboBox' /&gt;&lt;wnd aaname='Ampliación:' cls='Edit' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:TypeInto.Target>
+                    </ui:TypeInto>
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Enviar tecla de acceso rápido 'acrobat.exe Ampliación'" sap:VirtualizedContainerService.HintSize="333.6,154.4" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="enter" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="c5ef2ed0-d350-4109-a130-6556ec34f998" InformativeScreenshot="9ace438393ea3ebbacc4aedb304b6c2a">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                  </Sequence>
+                </ActivityAction>
+              </ui:WindowScope.Body>
+            </ui:WindowScope>
+            <ui:AnchorBase AnchorPosition="Top" DisplayName="Base de anclaje" sap:VirtualizedContainerService.HintSize="433.6,383.2" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
+              <ui:AnchorBase.Action>
+                <ActivityAction x:TypeArguments="ui:Anchor">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                  </ActivityAction.Argument>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Primer Proceso" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[CurrentRow(&quot;PrimerProceso&quot;).ToString]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3c205a1b-da73-4696-a18b-eb940ed803f2" InformativeScreenshot="619139171083744d3e33afc30f7cfcac" Selector="&lt;ctrl role='editable text' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                  </ui:TypeInto>
+                </ActivityAction>
+              </ui:AnchorBase.Action>
+              <ui:AnchorBase.AnchorProvider>
+                <ui:WaitImageAppear FoundElement="{x:Null}" DisplayName="Buscar imagen 'acrobat.exe ANCL0.pdf'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitImageAppear_1">
+                  <ui:WaitImageAppear.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJkAAAAYCAYAAADpsF/HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAPFSURBVGhD7Zi/a9tAFMf1b2j26i1bJk1esnTJ0kGDlwzZOgg8FLJlEHjKVBCYTF1uLwZtWQzaOhgtJQSjJZRgPIRgxLfvfkg+yyfJcawmLfcBga2TTl+/99W7d3ZgsXSMNZmlc6zJLJ1jTWbpHGsyS+dYk1k6x5rM0jnWZJbOsSazdI41maVz9jBZjlUaIwoGcBxHHK4fgiUZjXw0HsD8HpxeiGStTlnenVaT5QuGoevCCxjSFbfVEul0DL9vE2nZjxaTPSIOTuB4YyTCYBXWCcJeH35wCU9UuQuwjJy3SjENfbhl5bvBLHuR9+QZkkmgrq+MbbFCEnroBd/wvayiAwRsTiOE8dlP8p4wAff/OgnRc31cXxda6PooQTq7ge/y7/rLQzTolnN9RvBFafEZMjFScIheUlmJh+MFmOirxJYmun98h4wPNmjNszuM/b6cj44iHsALsuQWgeeqMdI3mcn5OqTZZMsYASVjI7KCCBwPzBXi0ig80WfaOfndHTIs8jUyRkEObpHwsfwebNivmV8mbZMoClB8Rck4QRA/1jxbJVo3WWmkNVbJWCbTG4GlS0rGFCPvVM7XqFubazStScohel+woHi4zhnC5IkvG4hHZFD3EmzBrylecnXP6ici/xNd+9CgVepwg5jWnG3KVSmcafr6GLL7TlufZpNlDD4FdhDNzSJE4FQQC4Qxe/DZgzpBiHnUm7sFN92FoSpwtg0jUIkS50zPNplM78/EPR4lSdQWQru+RbesZCPEy7p0HKA3nyMaUFXRfn+eRhg4SofQZIh/o9YV0ujcsEI8i/NlBeUYnt8FR6hketII8WN5Ka4e6sdVyrw49jWZauw3Sas8+y0ma9G9M9cOB+gV5yrxFTqUgfTPOm0x1pZg1x9jSlW70Le9KVIbpXc1WeH0QYTU9AKbAmd6y0p4+T/V+qBDKpl6s03PfovJGnUb5trhAL21lUxVvDpNLVo3LDGPhnBF/uormWlpPSYtjX+u+hi9QVbN4+Ar4t8zQ6JlH2Fu6JXJRE9AsxcNaoPJNj2OCphzjih9NhiG8waTNere32Sv01skvtqTFctytSebgwVDuvZXo9YNqudTRUIauNqTVVuO49NiMg43FUOo7VbK/8mMgSNMS6JK0NbOp9j5NZjM9a9wrV0fTlMaIY5uMv61Xve+JnudXmJnl1gsb5I8m2FS7lZpdxn+kC97rVa1BBbn1CZHov5+EjtrOnR9HbKHyd6LigE+PP+a3r+HNdnRsCarw5rsaFiT1fGBTWb5X7Ams3QM8Af9BrwfgcRuIAAAAABJRU5ErkJggg==" />
+                  </ui:WaitImageAppear.Image>
+                  <ui:WaitImageAppear.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cbf51e11-9907-4ded-948f-c970f1b9a56b" Selector="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='*.pdf - Adobe Acrobat Reader DC (64-bit)' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:WaitImageAppear.Target>
+                </ui:WaitImageAppear>
+              </ui:AnchorBase.AnchorProvider>
+            </ui:AnchorBase>
+            <ui:AnchorBase AnchorPosition="Top" DisplayName="Base de anclaje" sap:VirtualizedContainerService.HintSize="433.6,383.2" sap2010:WorkflowViewState.IdRef="AnchorBase_2">
+              <ui:AnchorBase.Action>
+                <ActivityAction x:TypeArguments="ui:Anchor">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                  </ActivityAction.Argument>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Clase Extra" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_5" Text="[CurrentRow(&quot;ClaseExtra&quot;).ToString]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3c205a1b-da73-4696-a18b-eb940ed803f2" InformativeScreenshot="b88fb1c1edba8e4fef0249de6dc789b3" Selector="&lt;ctrl role='editable text' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                  </ui:TypeInto>
+                </ActivityAction>
+              </ui:AnchorBase.Action>
+              <ui:AnchorBase.AnchorProvider>
+                <ui:WaitImageAppear FoundElement="{x:Null}" DisplayName="Buscar imagen 'acrobat.exe ANCL0.pdf'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitImageAppear_2">
+                  <ui:WaitImageAppear.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGsAAAARCAYAAADaBlKrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAK+SURBVFhH7Zexa+MwFMb9b2j2mi1bJk9eutzSpYOGLB26CzocdMtg8FQ4bjCU7tqPgLcuBu/BWwnBS7kLIUMJwXwnyYpPdqRcOI6mBn/gwfKzLev3vqdnD4N6owFWjzTA6pEGWD3SAKtH+jdY+xyR74PypR4Y9BE6AavCtkiRsBCe56mD0Ag8L1H1AtYWeRTAj3Ls9Ujf5YRVrTimhCBgHMW2EiMbFPMYdBQhfx9gXUIOWG9I2RheECNXoDrqOqsqkT8xBI0DH5GVO33pBTEdNe5sFm9bYB5REMs9R3LFVgskIQGZcqzkNKtX8OkIhH3Dd+o372zeq+Y9AmV3eq634OVezDHDU1NBxPX4BaXlsy8tO6xNCkaMhe2qBWuPkouPZ8/I1QLWC1bfW2c3Yanwpam1GL8SyfCAVAGqz5tFb+lUrCjVeSwWfoQpL7AU8yDkDnwl4yzOUvMWQJpnSS3B6Rewp0wBqitKgCjf6uufR3ZYJQf1CMJkIXYui07uWRLeLTzKUeIdRXJ97BqVDJ371TvrTG/pr7Ea5iRAQCS0Vz1nF6wxWPqmB2yS8MaOb7us/oOzhDplSh0KlpBRIgmNMS+Ex9RiG7HNYYF1RmxVJAjlGLlHujmklwtW1zWykfqByCjVnudKxMvKDkvvBV6YoLBZqwVL7m8ToxExnWVqg0UyBZHP/GVxi0s2Z5k67FM3FDeyIYoygUnqTFjq+SEYX+j7+uYsmW1qLzC7wR3K/Bks/Ir0Z3YMSy9S01AcwdphJfcUlQB1A3OyqWh0KvYwz2skwrHq+Z09q7VfOmFdibG1OBHfmD2CnptIHywHLCkJh7fKg+s/q9XxEYrZTJREBUtmqdGVBffgsgxK2UqnL34LbHXXFbsWSRP4f9x0cJluVOpmoY5XDrOWwQOgOo7QB8zopG+wBn02DbB6I+A32o9ji896aasAAAAASUVORK5CYII=" />
+                  </ui:WaitImageAppear.Image>
+                  <ui:WaitImageAppear.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="91f73697-f0af-4f9a-a034-b159819bf536" Selector="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='*.pdf - Adobe Acrobat Reader DC (64-bit)' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:WaitImageAppear.Target>
+                </ui:WaitImageAppear>
+              </ui:AnchorBase.AnchorProvider>
+            </ui:AnchorBase>
+            <ui:AnchorBase AnchorPosition="Top" DisplayName="Base de anclaje" sap:VirtualizedContainerService.HintSize="433.6,383.2" sap2010:WorkflowViewState.IdRef="AnchorBase_3">
+              <ui:AnchorBase.Action>
+                <ActivityAction x:TypeArguments="ui:Anchor">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                  </ActivityAction.Argument>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Primer Capítulo" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_6" Text="[CurrentRow(&quot;PrimerCapitulo&quot;).ToString]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3c205a1b-da73-4696-a18b-eb940ed803f2" InformativeScreenshot="b40636ab728d4d161fa2ae4f76344105" Selector="&lt;ctrl role='editable text' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                  </ui:TypeInto>
+                </ActivityAction>
+              </ui:AnchorBase.Action>
+              <ui:AnchorBase.AnchorProvider>
+                <ui:WaitImageAppear FoundElement="{x:Null}" DisplayName="Buscar imagen 'acrobat.exe ANCL0.pdf'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitImageAppear_3">
+                  <ui:WaitImageAppear.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH4AAAAWCAYAAAAGhCi/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAM0SURBVGhD7Zivb9tAFMf9bxwOLSsrMgopGRkZMAgpKCuwZDZWYMmo1FI1NHK8imRWaYpkNhCZTFMUmRRUUUBVRdZ3734554vTpUujZrW/kqX4fr53n7v3zvHQq5PqwXdUPfiOqgffUfXgO6oefEfVg++oevAdVQ/+VXrGnF+C+QnyZaXLdtcqjzHwLsDLlS55P+0IvsIii8A8D555WIBkUlLNFpUcAbUbxDne3823UIVlnsBnl+DzZ3pfIo/9V/n3H4JfEccLeAFHKV6rEpMkoI1wjjh/lC26py6CF1pkCBnDMJ2iWuWIBycIwkv4MiKQc7MfVObTxljK5tJpihLX12LDiDbUPs1RTG4QMPHO4IcchQmhywLj2LT1wIIbTEpx0sxYXxBeDVX0se0yavSnuZJ7lGJo2rT5bajtbBl3cIX0e6Trmzap+hj5agYeDNTc+hEb4Kmul81Jot0pAj6Tby74qpzgNtQ+yLm+Ide2HFp7gh8opyR4Mt7/iswYLssc8PVCrlTYFA77EXixoEUYI/LPEGYP1PqRTtO5NZ56ZyOOOTGox4rGCuaGHpCFp+v+y59Ig08yOpWUo+sFrn6Dj07qU9u0sdI2MbAww8LU12A3T3yzXugF8HpuT98X6rm0j4fWP4b6ObKIdqrJdxLyqYam1QbeXhSnvrGQ9qYykncGtWhyLBYhW2xZITsa6aJ2Nf3aBKds8nRZs34/8FWRYujZPj6hSD/TyV9HhEPqdeCt0MaCBGM6qarahUjaB7y+GNrzqccC31hgR7K/s3GMnBQin63gtd+6rFm/H3j12/bfrPExgm/LpUJvDb7txFvaXGBHW/uLFHBm5e0dT/wwRUHNm/UHOvEvRbI31HGC1znavnjZ2lxgV26On4KHI5rrlwIfT2g2cbm6RxJQnrXB2/eQ6S1dPNcpozmvstfkfym54YaIsjmq+stnDdcGj2qKdMg2c7w93gF1pODFa0tI1v3/Dl5AtW/MdKuP7/SFTcMW5eYrwwbvfnnofkLuvNWcYyS/SMz/FQsU3P4iSJGSDa3gxf8CxR1iY4sz16G1I/huaJcN9VHUg7fUg++oevC9PriAPzhngGz4QE0jAAAAAElFTkSuQmCC" />
+                  </ui:WaitImageAppear.Image>
+                  <ui:WaitImageAppear.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="538c8a27-10e7-4605-af23-294148214c98" Selector="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='*.pdf - Adobe Acrobat Reader DC (64-bit)' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:WaitImageAppear.Target>
+                </ui:WaitImageAppear>
+              </ui:AnchorBase.AnchorProvider>
+            </ui:AnchorBase>
+            <ui:AnchorBase AnchorPosition="Top" DisplayName="Base de anclaje" sap:VirtualizedContainerService.HintSize="433.6,383.2" sap2010:WorkflowViewState.IdRef="AnchorBase_4">
+              <ui:AnchorBase.Action>
+                <ActivityAction x:TypeArguments="ui:Anchor">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                  </ActivityAction.Argument>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Robot Avanzado" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_7" Text="[CurrentRow(&quot;RobotAvanzado&quot;).ToString]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3c205a1b-da73-4696-a18b-eb940ed803f2" InformativeScreenshot="55770fa8b9bfd385cebae56d3093d8a5" Selector="&lt;ctrl role='editable text' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                  </ui:TypeInto>
+                </ActivityAction>
+              </ui:AnchorBase.Action>
+              <ui:AnchorBase.AnchorProvider>
+                <ui:WaitImageAppear FoundElement="{x:Null}" DisplayName="Buscar imagen 'acrobat.exe ANCL0.pdf'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitImageAppear_4">
+                  <ui:WaitImageAppear.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG8AAAAUCAYAAACDIGNiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOQSURBVGhD7Vava+RAFM6/ER1bV3cqak11bcSaivrAuoqDisDCwalCYKmqGX8srDuzEHdiiStliakoS0QpS/juzcybZDbNr6Pljhz5ICKZvHkz73vfN+NgwmgxkTdiTOSNGBN5I8ZE3ogxkTdiTOSNGBN5I8bnk3dMEHk+oiTnDxM0niCCcwTiid8/jgbyjsjEFRzHsZ4ZwtUWWcG/dOGj5P235P9N8gKBTL0fkIoFfOcc4eZZfenERF4L/gl5hEwgcLwqcZEhWYVEKCvTD7FKMihhquKfIYi+IfRdHl9ApAcVKlFkW6zCGavahR/eI8neOA/PqZ4mEt+QJffV3G6A5VbmfkUaX9L7ApuDsQj+NouRFm1xBLPm2xsErs7tBt+xlWtCjiTyeT38eBGSIw3V6lDFSJiml2Nyj18pN+Uoyaut50/cjTFIebt4Dte5oEK+0Psb9uK6ei/22CyICPcaYk8LV4WgxRjCikeI+Rm9L5HktLLae5GtsaANuHOBvVx4n/IkwWWz8FpMMQ8bhK7lEMUO8czDLN5Rno64ljW74YZ2byHfIvI9+NGWKJV1uq4aj2O8KKGRAnmyhO/OEe/kfBm2y4BqVgmg2AvMXSJVzUVEbm6I6DPMxaNuqAEYdubZylEFoW6xlFmkMWZmYQ3FPyYRPFbRyb8KrA7nCiKjSvaRV4dSK8fiGZvwvCy6znWJOH1Vv57AjnuXs8F98EIKvKia8B3sGL2nU/Jt26ztWaKhrn3oUR510G5FVmI6RA7rLtUdxlCFaCdPj+tvNpEaplmGkkd2tF6W9qYfU4SCxLegDpeEvViW2RPXSx4rqXQfRp5iHUlFWXOqGG21JzU6IY+t2ChfQY57n0meRO0saVUe21VD8TVhWgGtyjPzd5LH5NhOcKI8grJOF7O7B9wZy+yL6yOv0Ualyr+QbQqkSol2TB957cp7Z9UdGHRhMf6sC2ES1888u/jUgaZQ+S/EAZ1xRgGG/PqZZxat4ttutoYEc36as8QqAlunUoE5h/viOsnj87Gcy4DJY0cqsp9Yyn2qGM7XdeapJq6feQNv9IxB5JUFMQTU7MINllibjlaFqN/crHHaWJ7+QCQ3quLlzfQHd6+EuRDJsQYFloXgWJXHJo8LJ/PaXdwV10ke25mKM4+OKwmT3+j2entL85d1s2+bco8PiOmGXTlOzcYpPlqnqhGGooG8CWPBRN5oAfwGYqiZTFRhZbAAAAAASUVORK5CYII=" />
+                  </ui:WaitImageAppear.Image>
+                  <ui:WaitImageAppear.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1b093af8-a643-443a-9906-f75b0b5c6395" Selector="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='*.pdf - Adobe Acrobat Reader DC (64-bit)' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:WaitImageAppear.Target>
+                </ui:WaitImageAppear>
+              </ui:AnchorBase.AnchorProvider>
+            </ui:AnchorBase>
+            <ui:AnchorBase AnchorPosition="Top" DisplayName="Base de anclaje" sap:VirtualizedContainerService.HintSize="433.6,383.2" sap2010:WorkflowViewState.IdRef="AnchorBase_5">
+              <ui:AnchorBase.Action>
+                <ActivityAction x:TypeArguments="ui:Anchor">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                  </ActivityAction.Argument>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Conceptos Basicos" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_9" Text="[CurrentRow(&quot;ConceptosBasicos&quot;).ToString]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3c205a1b-da73-4696-a18b-eb940ed803f2" InformativeScreenshot="0b1a922d41f02ac3c715bf36b6bf1e05" Selector="&lt;ctrl role='editable text' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                  </ui:TypeInto>
+                </ActivityAction>
+              </ui:AnchorBase.Action>
+              <ui:AnchorBase.AnchorProvider>
+                <ui:WaitImageAppear FoundElement="{x:Null}" DisplayName="Buscar imagen 'acrobat.exe ANCL0.pdf'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitImageAppear_5">
+                  <ui:WaitImageAppear.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHoAAAAUCAYAAABCpynOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQISURBVGhD7Vc9i9tAENXf2Nrtdf4DqtykSZNWhZsr0gtcBFwErhC4uiogMFel2T4Y1F1jUBeCUXcEo+bIHcaEYA7xMvsl764k20cOcof1QGB2pJ3ZeTNv1gF6nAV6os8EPdFngp7oM0FP9JmgJ/pM0BPdiS3yJMQgyfGkV7pQrTnG7B2S/FGvvD60EF1hW2RI4xGCIJAPixLwvCTL68RTnmAwSJAfY+RZOJHo7RJJOMSY3x3PT8kRUT5PKZ6XRoNoVZ0MYcxRbEXoGxSLGaKLl07ky+G/Ev1G4BF9jyweIghnyCXJTVTlEvO620VB3CAvd8r4lCMZXCC6miJiRg2usTR2qRbfkEQX6nsWYbYUSuGtB7TH7BalDEEnPP6Cr7XfEWK+IssTNcmlXtOPIbwqkc9jhGY9jDE3qkS25SwC879xoPyy6ApfGn4FdijzG8Qha7ctr+scBEFIsk4WmR/9W2BbYJGYOOwzt+w9X2qbCP8WszpXpymES/QmQ0zBdX5Y3YGPyYEuhKpcYELBsDHHWgQhD0LOwwl4sanfZ3FGukCQ+1NxTBYUNJG7miuleBTyN9Dr9J4jhyrh+0RSErIpEThEnN2LXVs6eoc1/0gJ1HOzWiObEFnsI/h6p95nE2QbnblWNP06ewoZrouHosxnFNMleElByDzs46vhEG2aaopMNML2O9LovbTVqposrfNeOPmoc3oiXKLlDGEYpStV+R6qIsUoGCDiP/XKHxTpB0qGfUCrYk3HRRwiHZtsQon6gLT4o+0CZl3vIWF/pzvaLj5dUGatQXS1QjqibpDf6yUrdvm7VpMuHPfrwD679D+0OlTDfkcXfTPXXk4FnPMou6uUx/GsjpYJNTKkVrR0nkK0924Ns65kyHm6iMZP8GjQTXQbIbKITZFa0kiEJ4uCvPg45pfuLllqyat49mffjziS5OSbuu/Y+XHisaH8uuNE+a0L1xpLLJphIdTzCFyiTeWMUhQtpd7Z0UYGDxLd1rkCXesGXZ2174bTO9qXUz0+mK8yAof8/sCDiNmMqNpmn11DSvJQxWq/I5uqjejujm7K9QardAzWwZcN7zJmZo1969bVP/qE7OGHSqA/o00AB4km+DO64Ijf0V6/xLp9GbGhK7yelfpw1ghozlyTLH9GN+eymofdRLf7/a2K01xa6w5rIVreU1qIbszoFXg8ljZVlP6Mbpn55t7wfKIFBLHcugHb/6MFOd7t2MiSwDGibckU39ey6e+rHtVNKuEsmuLK2H25NZdEYTOd7dxobYnzR4Uh0scRv87NXTTGZzrXSJ1d/19W+1tN4+XH/Qdj51L/pTW3due8WsbN/raqHEAL0a8NLRLa49noiT4T9ESfCd4A0T3+HcBfiwu1UhTIVAEAAAAASUVORK5CYII=" />
+                  </ui:WaitImageAppear.Image>
+                  <ui:WaitImageAppear.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c2afde6a-87d4-48b1-abf5-f6959ec3a9dd" Selector="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='*.pdf - Adobe Acrobat Reader DC (64-bit)' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:WaitImageAppear.Target>
+                </ui:WaitImageAppear>
+              </ui:AnchorBase.AnchorProvider>
+            </ui:AnchorBase>
+            <ui:AnchorBase AnchorPosition="Top" DisplayName="Base de anclaje" sap:VirtualizedContainerService.HintSize="433.6,383.2" sap2010:WorkflowViewState.IdRef="AnchorBase_6">
+              <ui:AnchorBase.Action>
+                <ActivityAction x:TypeArguments="ui:Anchor">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                  </ActivityAction.Argument>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="RPA" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_10" Text="[CurrentRow(&quot;RPA&quot;).ToString]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3c205a1b-da73-4696-a18b-eb940ed803f2" InformativeScreenshot="899d0f5a3f6ee7e3d69f5ee77220b4ca" Selector="&lt;ctrl role='editable text' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                  </ui:TypeInto>
+                </ActivityAction>
+              </ui:AnchorBase.Action>
+              <ui:AnchorBase.AnchorProvider>
+                <ui:WaitImageAppear FoundElement="{x:Null}" DisplayName="Buscar imagen 'acrobat.exe ANCL0.pdf'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitImageAppear_6">
+                  <ui:WaitImageAppear.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC8AAAATCAYAAAAAn1R6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFnSURBVEhL7ZQ/ioNAGMXnGlN7BC9gNU3qtFPYbLG94BkCHmBhIBeYCwTmAEJ6sV3EJkWQFCEsw9vxL6NrshYDEvAHFs6zeO+b90nwxmzm12Izvxab+bWYMf+DUn6AEGI9DNExRalrXaNSMaitU44kLY1ic4GKfKP7iNSlO3PLc/NcomzeK+QyRjCYmOi6RJpwE2aHw/lanzToQiKkPoLAAw0linEyJywwbyglOPHA5bd5mdErhYhSMJF1078jF3sQ9oX0VN/SHiK/N4pLFk0+E6E12Wfm+3AGnUEwrw3zJ5g7lnU+iCHzaqwPtSmgYmZ6/wlZPJovdC7Ahml33WcCuWP3/0xe45Ydwc3kgkOKm61b4ShPcBrCXXE+7Cyz/YK7X9wFten6S2OoqnYz1Sc0NbFuzQ4ZKVNCdyxa2PbP0ff2lfl+ytMF7W5jGIAbFpkf9/aV+fa7uV9juwduqzNj/n3YzK8D8AvSlgu8vtmNIwAAAABJRU5ErkJggg==" />
+                  </ui:WaitImageAppear.Image>
+                  <ui:WaitImageAppear.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0b524c15-faac-43aa-bd6e-7a6ed9ba366c" Selector="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='*.pdf - Adobe Acrobat Reader DC (64-bit)' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:WaitImageAppear.Target>
+                </ui:WaitImageAppear>
+              </ui:AnchorBase.AnchorProvider>
+            </ui:AnchorBase>
+            <ui:AnchorBase AnchorPosition="Top" DisplayName="Base de anclaje" sap:VirtualizedContainerService.HintSize="433.6,383.2" sap2010:WorkflowViewState.IdRef="AnchorBase_7">
+              <ui:AnchorBase.Action>
+                <ActivityAction x:TypeArguments="ui:Anchor">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                  </ActivityAction.Argument>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Segundo Modulo" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_8" Text="[CurrentRow(&quot;SegundoModulo&quot;).ToString]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3c205a1b-da73-4696-a18b-eb940ed803f2" InformativeScreenshot="fde82cf45b0d7f4a69ceea901f828140" Selector="&lt;ctrl role='editable text' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                  </ui:TypeInto>
+                </ActivityAction>
+              </ui:AnchorBase.Action>
+              <ui:AnchorBase.AnchorProvider>
+                <ui:WaitImageAppear FoundElement="{x:Null}" DisplayName="Buscar imagen 'acrobat.exe ANCL0.pdf'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitImageAppear_7">
+                  <ui:WaitImageAppear.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG4AAAASCAYAAAC6u+tBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOASURBVGhD7Vc9a+NAENXf2Fqtu/wBVW5Sp1XhJsV1KQTqXBykEKi66kBgUoWDLQ8Og5ojjUFdOIS6EIyaK4JREUIQ72ZXu7JW8ofs8x0x6IHA2tHOzsybmR1bGHCWGIg7UwzEnSkG4s4UZ0jcO3J+DcvlyNXKx8EzuHsBlz+r910okATO0X60iCtRZD8QuCNYlkXPCG74gLxU4g+BgTgBk7gyRTRmYBOOJZFV5gvMvAmCpFAffAQMxAmYxL0nCGyGcZRS7bWxqxrbMv1cg+cv0kA7SCjkCjmHK2VipXKAuVPc6v3MRbjIlQ1CN4fnsErm3CDwxobDVYLRmjyTwfHukORvStqA9I/svp3CZZWNzJ3hV/YToT7b8cGzldqwT/cKGffh1LLPZCfpl8RVfu3ze+3HG/Lkbu2nNYY3W2ztdq1WKYJ8WW2KYmRFY1exQODYcPx5pUy+X2DCn1AalfqGJf8EZl0hyl7Fh/0cEGfylN7UfuYjXtFB6hw3epSyfPGlCrp2uHwCn1DQnRAJ2Vvmc/jkvO4aBiRxDXKkbhEodXa5ROyPwbyYKCHs1E0JlYRw2ARRSl+XORahS37bRxFXLjkmjMgPFpWf8ZQSYlTFV2420R1OyICEByojNeslVrFPRulDBRotSwZEG0yQBjqqxfZzYJu8zCKMNYkSZquU8jpYAq/IoiuyvWmrgrRT2yXQPfs9CWDbARJa2K27kL9rkiWarfIQ4jbYrIqhTtAWusTV0G1AtM5HqgIKlizh1iMUy0N0NR5XcdvkzUBWMImT8jpJBJS8GQSNA4nbrXvDFXA0ceq34afQZR9DnIDe/A1pp+Ia0NmhyaQ7KphnZI5APweOJW5rVRhVqnCqipO6V127/0HFmRW9hkGcMHrkhpjLy5l6eDqjlqmGlVUMj235eyAN0hXWhmqzzhQxXepl/qAGgX7E0ebq3K13nEqa9j20yeEDidutW/m19Y7r57eZgO077gJe/JukXZgVJ+63maemJPE0J5vNk2PltKrMxrrleJglajIsUvB6MiOd91/h2T2Jk+eup0pGifU9uoFdt5C2XURy8MMcrDQOJW6v7uZUKWT3iMjPukJ7+L1uhaRrHtbTrtm1utjTKvuhypZLCsiLWlHTqdHiBpwSJyBOT5wN4tRYbY0jZBsSf8Df4yQV122xO/4EDzgJTkPcgP8M4A8jwbFjHcFWaAAAAABJRU5ErkJggg==" />
+                  </ui:WaitImageAppear.Image>
+                  <ui:WaitImageAppear.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0664497b-7462-444b-8037-171f99f95186" Selector="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='*.pdf - Adobe Acrobat Reader DC (64-bit)' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:WaitImageAppear.Target>
+                </ui:WaitImageAppear>
+              </ui:AnchorBase.AnchorProvider>
+            </ui:AnchorBase>
+            <ui:CloseWindow TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Cerrar ventana 'acrobat.exe encuesta2Ty...'" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="CloseWindow_2" InformativeScreenshot="59542e1b6e458b39317a0c2542c72298" Selector="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='*.pdf - Adobe Acrobat Reader DC (64-bit)' /&gt;" WaitForReady="INTERACTIVE" />
+            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Asociar ventana 'acrobat.exe Adobe'" sap:VirtualizedContainerService.HintSize="433.6,345.6" sap2010:WorkflowViewState.IdRef="WindowScope_3" InformativeScreenshot="03c847fac6553508ee689829bf1d2cb3" Selector="&lt;wnd app='acrobat.exe' cls='#32770' title='Adobe Acrobat' /&gt;">
+              <ui:WindowScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'Button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1e5fa65c-9399-4ef7-b24d-0ef06afdef39" InformativeScreenshot="fafe6a428ffeeff102c266f19f2c4af0" Selector="&lt;wnd aaname='No' cls='Button' title='&amp;amp;No' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                  </Sequence>
+                </ActivityAction>
+              </ui:WindowScope.Body>
+            </ui:WindowScope>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+  </Sequence>
+</Activity>

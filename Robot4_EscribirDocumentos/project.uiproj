@@ -1,0 +1,6 @@
+{
+  "Name": "Robot4_EscribirDocumentos",
+  "ProjectType": "Process",
+  "Description": "Proceso en blanco",
+  "MainFile": "Main.xaml"
+}

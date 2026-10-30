@@ -1,0 +1,6 @@
+{
+  "Name": "Robot2",
+  "ProjectType": "Process",
+  "Description": "Interacción con Excel",
+  "MainFile": "Main.xaml"
+}
