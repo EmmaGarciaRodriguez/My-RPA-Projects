@@ -21768,9 +21768,9 @@
     "restore": {
       "projectUniqueName": "Robot1",
       "projectName": "Robot1",
-      "projectPath": "C:\\Users\\emmar\\Documents\\UiPath\\Proyectos\\Robot1\\.local",
+      "projectPath": "C:\\Users\\emmar\\Documents\\UiPath\\Proyectos\\My-RPA-Projects\\Robot1\\CODE\\.local",
       "packagesPath": "C:\\Users\\emmar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\emmar\\Documents\\UiPath\\Proyectos\\Robot1\\.local",
+      "outputPath": "C:\\Users\\emmar\\Documents\\UiPath\\Proyectos\\My-RPA-Projects\\Robot1\\CODE\\.local",
       "UsingMicrosoftNETSdk": false,
       "restoreAuditProperties": {
         "enableAudit": "False"
@@ -21795,7 +21795,7 @@
             "version": "[26.10.5, 26.10.5]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPathPlatform\\Studio\\26.0.203-cloud.25204\\PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPathPlatform\\Studio\\26.0.204-cloud.25540\\WorkflowCompiler\\PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

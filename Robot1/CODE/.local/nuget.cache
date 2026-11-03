@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jOxieAilDqg=",
+  "dgSpecHash": "pmiL27lJG6A=",
   "success": true,
-  "projectFilePath": "C:\\Users\\emmar\\Documents\\UiPath\\Proyectos\\Robot1\\.local\\",
+  "projectFilePath": "C:\\Users\\emmar\\Documents\\UiPath\\Proyectos\\My-RPA-Projects\\Robot1\\CODE\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\emmar\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\emmar\\.nuget\\packages\\closedxml\\0.105.0\\closedxml.0.105.0.nupkg.sha512",
