@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "shellId": "cmd",
+    "title": "Command Prompt",
+    "colorId": "",
+    "cwd": "C:\\Users\\emmar\\Documents\\UiPath\\Proyectos\\My-RPA-Projects\\Robot2\\CODE",
+    "isActive": true
+  }
+]

@@ -19742,9 +19742,9 @@
     "restore": {
       "projectUniqueName": "Robot4_EscribirDocumentos",
       "projectName": "Robot4_EscribirDocumentos",
-      "projectPath": "C:\\Users\\emmar\\Documents\\UiPath\\Proyectos\\Robot4_EscribirDocumentos\\.local",
+      "projectPath": "C:\\Users\\emmar\\Documents\\UiPath\\Proyectos\\My-RPA-Projects\\Robot4_EscribirDocumentos\\CODE\\.local",
       "packagesPath": "C:\\Users\\emmar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\emmar\\Documents\\UiPath\\Proyectos\\Robot4_EscribirDocumentos\\.local",
+      "outputPath": "C:\\Users\\emmar\\Documents\\UiPath\\Proyectos\\My-RPA-Projects\\Robot4_EscribirDocumentos\\CODE\\.local",
       "UsingMicrosoftNETSdk": false,
       "restoreAuditProperties": {
         "enableAudit": "False"
@@ -19774,7 +19774,7 @@
             "version": "[22.4.7, 22.4.7]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPathPlatform\\Studio\\26.0.203-cloud.25204\\SolutionPackager\\Tools\\WorkflowCompiler\\PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPathPlatform\\Studio\\26.0.204-cloud.25540\\WorkflowCompiler\\PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
