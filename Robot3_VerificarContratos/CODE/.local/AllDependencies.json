@@ -20413,9 +20413,9 @@
     "restore": {
       "projectUniqueName": "Robot3_VerificarContratos",
       "projectName": "Robot3_VerificarContratos",
-      "projectPath": "C:\\Users\\emmar\\Documents\\UiPath\\Proyectos\\Robot3_VerificarContratos\\.local",
+      "projectPath": "C:\\Users\\emmar\\Documents\\UiPath\\Proyectos\\My-RPA-Projects\\Robot3_VerificarContratos\\CODE\\.local",
       "packagesPath": "C:\\Users\\emmar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\emmar\\Documents\\UiPath\\Proyectos\\Robot3_VerificarContratos\\.local",
+      "outputPath": "C:\\Users\\emmar\\Documents\\UiPath\\Proyectos\\My-RPA-Projects\\Robot3_VerificarContratos\\CODE\\.local",
       "UsingMicrosoftNETSdk": false,
       "restoreAuditProperties": {
         "enableAudit": "False"
@@ -20435,7 +20435,7 @@
             "version": "[26.10.5, 26.10.5]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPathPlatform\\Studio\\26.0.203-cloud.25204\\SolutionPackager\\Tools\\WorkflowCompiler\\PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPathPlatform\\Studio\\26.0.204-cloud.25540\\WorkflowCompiler\\PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

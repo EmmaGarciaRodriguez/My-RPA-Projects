@@ -1,0 +1,6 @@
+{
+  "Name": "Robot6_OCR",
+  "ProjectType": "Process",
+  "Description": "Proceso en blanco",
+  "MainFile": "Main.xaml"
+}

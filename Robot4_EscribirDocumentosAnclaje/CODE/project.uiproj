@@ -1,0 +1,6 @@
+{
+  "Name": "Robot4_EscribirDocumentosAnclaje",
+  "ProjectType": "Process",
+  "Description": "Proceso en blanco",
+  "MainFile": "Main.xaml"
+}

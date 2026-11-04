@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MgdAF2yNtOA=",
+  "dgSpecHash": "HGrATRA2vsE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\emmar\\Documents\\UiPath\\Proyectos\\Robot3_VerificarContratos\\.local\\",
+  "projectFilePath": "C:\\Users\\emmar\\Documents\\UiPath\\Proyectos\\My-RPA-Projects\\Robot3_VerificarContratos\\CODE\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\emmar\\.nuget\\packages\\csvhelper\\33.0.1\\csvhelper.33.0.1.nupkg.sha512",
     "C:\\Users\\emmar\\.nuget\\packages\\dynamicexpresso.core\\2.12.0\\dynamicexpresso.core.2.12.0.nupkg.sha512",
