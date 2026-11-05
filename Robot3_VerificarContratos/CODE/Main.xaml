@@ -121,7 +121,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="568,2488" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="488,2488" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -132,7 +132,7 @@
         <OutArgument x:TypeArguments="s:String[]">[GlobalVariablesNamespace.GlobalVariables.Files]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles("C:\Users\emmar\Documents\UiPath\Proyectos\My-RPA-Projects\Robot3_VerificarContratos\CODE\DocumentosPDF")]</InArgument>
+        <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles("C:\emmar\Documents\UiPath\Proyectos\My-RPA-Projects\Robot3_VerificarContratos\CODE\DocumentosPDF")]</InArgument>
       </Assign.Value>
     </Assign>
     <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each item" sap:VirtualizedContainerService.HintSize="488,2288.6666666666665" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[GlobalVariablesNamespace.GlobalVariables.Files]">
